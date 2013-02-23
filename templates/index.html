@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro de Domínio</title>
+	</head>
+	<body>
+		Entre com o domínio:
+		<form action="/" method="post">
+			
+			<input type="text" name="dominio" />
+			<input type="submit" value="Verificar" />
+			
+		</form>
+		
+		{% with menssagens = get_flashed_messages() %}
+			{% if menssagens %}
+				<h3>Resultado:</h3>
+				{% for menssagem in menssagens %}
+				<pre>{{menssagem}}</pre>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		
+		
+	</body>
+</html>
